@@ -51,8 +51,12 @@ function setUpModel(imgTot){
 function nextImg(){
     var img = document.getElementById('3d-img');
     try {
-        console.log(currentIndex);
         
+        if ( interval != null ){
+            clearInterval(interval);
+            interval = null;
+        }
+
         if (currentIndex < imgTotal-1)
             currentIndex += 1;    
         else
@@ -68,7 +72,11 @@ function nextImg(){
 function prevImg(){
     var img = document.getElementById('3d-img');
     try {
-        console.log(currentIndex);
+
+        if ( interval != null ){
+            clearInterval(interval);
+            interval = null;
+        }
         
         if (currentIndex > 1)
             currentIndex -= 1;    
