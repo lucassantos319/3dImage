@@ -145,7 +145,7 @@ function setUpModel(imgTot,path,colorDiv,colorButton,imgSize){
     img.style.maxHeight = (imgSize-40).toString()+'px';
 
     img.id = '3d-img';
-    img.src = path+'/img-1.png';
+    img.src = path+'img-1.png';
 
     divImg.style.padding = "20px";
     divImg.style.textAlign = "center";
@@ -190,7 +190,7 @@ function nextImg(){
         else
             currentIndex = 1;
     
-        img.src = localImg+'/img-'+currentIndex.toString()+'.png';  
+        img.src = localImg+'img-'+currentIndex.toString()+'.png';  
     
     } catch (error) {
         console.log(error);
@@ -215,7 +215,7 @@ function prevImg(){
             else
                 currentIndex = imgTotal-1;
         
-            img.src = localImg+'/img-'+currentIndex.toString()+'.png';  
+            img.src = localImg+'img-'+currentIndex.toString()+'.png';  
         
         }
         
@@ -237,7 +237,7 @@ function _3dImageVisualization(){
                 else
                     currentIndex = 1;
         
-                img.src = localImg+'/img-'+currentIndex.toString()+'.png';        
+                img.src = localImg+'img-'+currentIndex.toString()+'.png';        
             },120);        
             var i = document.getElementById('icon3d');
             i.classList.remove('fa' ,'fa-play');
